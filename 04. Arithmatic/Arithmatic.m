@@ -1,0 +1,15 @@
+img1=zeros(400,400);
+imshow(img1);
+img1(100:200, 100:300)=1;
+imshow(img1);
+img2=zeros(400,400);
+img2(100:300, 100:200)=1;
+imshow(img2);
+img3=imadd(img1, img2); 	%img3=img1+img2;
+imshow(img3);
+img4=img1-img2; 			%img4=imsubtract(img1, img2);
+imshow(img4);
+img5=imabsdiff(img1, img2);
+imshow(img5);
+img6=imcomplement(img1);
+imshow(img6);

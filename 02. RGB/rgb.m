@@ -1,0 +1,11 @@
+img = imread("Sunflower.png");
+imshow(img);
+imwrite(img, "temp.png");
+r=img(:,:,1);
+g=img(:,:,2);
+b=img(:,:,3);
+imshow(r);figure;imshow(g);figure;imshow(b);figure;imshow(img);
+img2(:,:,1)=img(:,:,2);
+img2(:,:,2)=img(:,:,1);
+img2(:,:,3)=img(:,:,3);
+imshow(img2);
