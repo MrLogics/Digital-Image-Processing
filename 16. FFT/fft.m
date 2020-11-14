@@ -1,0 +1,15 @@
+img = imread('cameraman.tif');
+f = fft2(img);
+f2 = fftshift(f);
+f2 = fftshift(fft2(img));
+imshow(abs(f2), []);
+f3 = 0.5*log(1+abs(f2));
+imshow(f3, []);
+i = ifftshift(f2);
+i = ifft2(i);
+i = ifftshift(ifft2(f2));
+i2 = abs(i);
+imshow(i2, []);
+i = ifft2(ifftshift(f2));
+i2 = abs(i);
+imshow(i2, []);

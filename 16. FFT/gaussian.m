@@ -1,0 +1,16 @@
+img = imread('cameraman.tif');
+[m, n] = size(img);
+[p, q] = meshgrid(-floor(m/2):floor((m-1)/2), -floor(n/2):floor((n-1)/2));
+D = sqrt(p.^2 + q.^2);
+n = 3;
+d = 20;
+C = 1./exp((D.^2)./(2*(d^2)));
+f2 = fftshift(fft2(img));
+figure;
+imshow(0.5*log(1+abs(f2)), []);
+hp = f2.*C;
+hpi = ifft2(ifftshift(hp));
+f = abs(hpi);
+fm = max(f(:));
+figure;
+imshow(f/fm, []);
