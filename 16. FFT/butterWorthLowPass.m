@@ -1,4 +1,4 @@
-function out = butterWorthLp(img, d, x)
+function out = butterWorthLowpass(img, d, x)
 	[m, n] = size(img);
 	[p, q] = meshgrid(-floor(m/2):floor((m-1)/2), -floor(n/2):floor((n-1)/2));
 	D = sqrt(p.^2 + q.^2);

@@ -12,7 +12,9 @@ plt.show()
 m, n = img.shape
 p, q = np.meshgrid(np.arange(-np.floor(m/2), np.floor(m/2)), np.arange(-np.floor(n/2), np.floor(n/2)))
 D = np.sqrt(p**2 + q**2)
-C = D > 20
+C = D < 20
+#High Pass
+#C = D > 20
 hp = f2 * C
 
 i = np.fft.ifftshift(hp)

@@ -15,6 +15,8 @@ D = np.sqrt(p**2 + q**2)
 n = 3
 d = 15
 C = 1/(1+(D/d)**(2*n))
+#High Pass
+#C = 1/(1+(d/D)**(2*n))
 hp = f2 * C
 
 i = np.fft.ifftshift(hp)
